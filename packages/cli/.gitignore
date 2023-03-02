@@ -1,6 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-# Solidity VSCode extension binary output
-bin/
+
 cache/
 
 # dependencies
@@ -21,15 +20,15 @@ dist
 dist-ssr
 lib
 .serverless
-storybook-static
-.docusaurus
-.cache-loader
+
+# local deployments
+packages/contracts/packages/owlprotocol-contracts/deployments/ganache/*
 
 # misc
 .DS_Store
 *.pem
 .idea
-.git.*
+output
 
 # debug
 npm-debug.log*
@@ -38,15 +37,23 @@ yarn-error.log*
 .pnpm-debug.log*
 logs
 *.log
-temp.*
 
 # local env files
+.env.local
+.env.development
+.env.test
+.env.production
 .env
-.env.*
-!.env.example
 
-# other
+# turbo
 .turbo
+
+# local
 *.local
+
+# ipfs
 .ipfs
-*.sqlite
+.datastore
+.datastore_fs
+.datastore_level
+.datastore_s3
